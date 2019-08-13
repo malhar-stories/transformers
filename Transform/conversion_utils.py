@@ -38,7 +38,7 @@ class Convert(object):
         csv_content = json_flatten.flatten(input_json)
         return csv_content
 
-    def xml_to_csv(self, input_xml: str) -> str:
+    def xml_to_csv(self, input_xml: str) -> dict:
         """
         Conversion for XML format to CSV format.
         For this conversion we will convert the XML into JSON first and then we
@@ -51,4 +51,6 @@ class Convert(object):
         """
         converted_json = xmltodict.parse(input_xml)
         converted_csv = json_flatten.flatten(converted_json)
-        return converted_csv
+
+        return {'columns': converted_csv.keys(),
+                'values': converted_csv.values()}
