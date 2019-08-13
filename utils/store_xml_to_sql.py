@@ -18,14 +18,20 @@ def write_blob(filename):
         encoded_file = base64.b64encode(file)
         tapobj = SQLTaps(username='root', host='localhost', password='',
                          db_name='ETLtestDb', db_type='mysql')
+        xml_filename = filename.split('/')[::-1][0]
 
         conn = tapobj.get_connection()
         import pdb;
         pdb.set_trace()
         result = tapobj.get_rows(conn,
-                                 'INSERT INTO StudentsData (id, student_xml) values({id}, \'{file}\');'.format(id=2, file=encoded_file.decode()))
+                                 'INSERT INTO StudentsData (id, '
+                                 'filename, student_xml) '
+                                 'values({id},\'{filename}\', \'{file}\');'.format(
+                                     id=2, filename=xml_filename,
+                                     file=encoded_file.decode()))
         return result
 
 
 if __name__ == '__main__':
-    write_blob('/home/lucipher/learnings/mysql_singers/student1.xml')
+    write_blob('/home/shounk/own_projects/ETL/etlenv/transformers/utils'
+               '/student.xml')

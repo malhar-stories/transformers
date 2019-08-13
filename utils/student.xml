@@ -1,0 +1,14 @@
+<student>
+    <name first="Shounak" middle="Girish" last="Joshi"/>
+    <class>
+        <stream>
+            Computer Science
+        </stream>
+        <level>
+            Under Graduate
+        </level>
+        <year>
+            First year
+        </year>
+    </class>
+</student>
