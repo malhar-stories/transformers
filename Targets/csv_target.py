@@ -6,7 +6,7 @@ import csv
 
 def csv_target(output_filename: str,
                data_rows: list,
-               headers: list=None) -> None:
+               headers: list=[]) -> None:
     """
     This function will write the provided content to csv file.
     :param output_filename: <Filename in which data to be written>
@@ -16,7 +16,7 @@ def csv_target(output_filename: str,
     """
     with open(output_filename, 'w+') as output_csv:
         csv_writer = csv.writer(output_csv,
-                                delimeter=',',
+                                delimiter=',',
                                 quotechar='"',
                                 quoting=csv.QUOTE_MINIMAL)
 
