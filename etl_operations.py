@@ -42,7 +42,6 @@ def etl_operations():
         csv_row_list.append(csv_content.get('values'))
 
     csv_target('students.csv', csv_row_list, headers)
-    print(csv_row_list)
 
 
 if __name__ == '__main__':
