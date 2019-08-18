@@ -6,7 +6,7 @@ import csv
 
 def csv_target(output_filename: str,
                data_rows: list,
-               headers: list=[]) -> None:
+               headers: list = []) -> None:
     """
     This function will write the provided content to csv file.
     :param output_filename: <Filename in which data to be written>

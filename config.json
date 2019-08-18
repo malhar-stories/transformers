@@ -1,7 +1,7 @@
 {
-  "db_type": "mysql",
-  "username": "root",
-  "password": "",
-  "db_name": "ETLtestDb",
-  "host": "localhost"
+  "db_type": "<SQL DATABASE TYPE: EX mysql>",
+  "username": "<username>",
+  "password": "<password>",
+  "db_name": "<Database name>",
+  "host": "<host name/Ip>"
 }
